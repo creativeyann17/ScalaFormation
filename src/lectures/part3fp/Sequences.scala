@@ -45,6 +45,7 @@ object Sequences extends App {
   val maxRuns = 1000
   val maxCapacity = 1000000
 
+
   def getWriteTime(collection: Seq[Int]): Double = {
     val rand = new Random
     val times = for {
@@ -63,4 +64,8 @@ object Sequences extends App {
   println(getWriteTime(numbersList))
   println(getWriteTime(numbersVector))
 
+}
+
+class Class3 extends ((String) => Int) {
+  override def apply(a: String): Int = a.size
 }
